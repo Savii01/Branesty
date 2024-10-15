@@ -8,7 +8,7 @@ function LandingPage() {
   return (
     <BrowserRouter>
     <div className="font-sans">
-    <div className='bg-white flex justify-center items-center my-[150px] px-10 sm:px-20 md:px-10 lg:px-20 xl:px-40 '>
+    <div className='bg-white flex justify-center items-center '>
           <Top className=""/>
           <Home className='mb-20'/>
         </div>
