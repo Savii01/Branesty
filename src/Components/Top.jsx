@@ -6,7 +6,7 @@ function Top() {
     const [showMenu, setShowMenu] = useState(false)
     return (
       <div className='z-[999] bg-black flex justify-center items-center w-screen fixed top-0 h-10 md:h-20'>
-        <div className='text-white w-full max-w-[1200px] flex justify-between px-4 items-center'>
+        <div className='text-white w-full max-w-[1200px] flex justify-between px-4 md:px-20 items-center'>
           {/* Logo Section */}
           <span className='font-bold text-lg md:text-xl'>Branesty.</span>
 
