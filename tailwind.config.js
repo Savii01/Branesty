@@ -292,6 +292,7 @@ module.exports = {
           lightBlueWhite: '#d3fbff',
           Blue: '#0c545a',
           blue: '#2b2b2b',
+          lemon: "#E5FF2A"
       },
       fontFamily: {
           sans: ["Montserrat"],
