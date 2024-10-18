@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link'
 function Top() {
     const [showMenu, setShowMenu] = useState(false)
     return (
-      <div className='z-[999] bg-black flex justify-center items-center w-screen fixed top-0 h-20 md:h-20'>
+      <div className='z-50 border-b-4 border-b-lemon  bg-black flex justify-center items-center w-screen fixed top-0 h-20 md:h-20'>
         <div className='text-white w-full max-w-[1200px] flex justify-between px-4 md:px-20 items-center'>
           {/* Logo Section */}
           <span className='font-bold text-lg md:text-xl'>Branesty.</span>

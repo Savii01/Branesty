@@ -263,7 +263,7 @@ module.exports = {
         swing: 'swing 2s ease-out ',
         rubberBand: 'rubberBand 1s ',
         flash: 'flash 2s ',
-        headShake: 'headShake 2s ',
+        headShake: 'headShake 2s',
         wobble: 'wobble 1s ',
         jello: 'jello 2s ',
         fadeIn: 'fadeIn 2s linear ',
