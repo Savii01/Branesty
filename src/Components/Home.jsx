@@ -1,12 +1,12 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import HeroBg from '../Images/herobg.png';
+import HeroBg from '../Images/herobg2.png';
 
 function Home() {
   return (
     <div
-      className='relative bg-cover bg-right flex justify-center items-center h-[667px] lg:h-[600px] xl:h-[670px] w-full py-10'
-      style={{ backgroundImage: `url(${HeroBg})` }}
+      className='relative bg-black  bg-right flex justify-center items-center h-[567px] lg:h-[600px] xl:h-[580px] w-screen py-10'
+      style={{ backgroundImage: `url(${HeroBg})`, backgroundSize:'1500px',  maxWidth:'1350px', maxHeight:'700px'}}
       id='home'
     >
       {/* Overlay for mobile only - specific to Home */}
@@ -17,7 +17,7 @@ function Home() {
           We provide creative <br className='hidden md:block' />design <span className='text-lemon'>solutions</span> <br className='hidden md:block' />
           for everyone.
         </h1>
-        <p className="font-sans font-medium mt-5 lg:text-[20px] md:mt-7 max-w-[650px]">
+        <p className="font-sans font-medium mt-5 lg:text-[18px] md:mt-7 max-w-[590px]">
           We create tailored solutions that bring your vision to life. Whether you’re a startup or an established business, 
           we focus on user experience and fresh ideas to deliver designs that inspire and engage.
         </p>

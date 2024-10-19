@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import * as AiIcons from 'react-icons/ai';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+
+// importing images
+import Img1 from '../Images/img1.png'
+import Img2 from '../Images/img2.png'
+import Img3 from '../Images/img3.png'
+import Img4 from '../Images/img4.png'
+import Img5 from '../Images/img5.png'
+import Img6 from '../Images/img6.png'
 
 function Services() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,6 +26,32 @@ function Services() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Custom Next Arrow
+  function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="absolute right-5 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer h-10 w-10 md:w-14 md:h-14 rounded-full flex justify-center items-center bg-white/25 hover:bg-gray-900 hover:border-2 hover:border-lemon hover:shadow-lg"
+        onClick={onClick}
+      >
+        <AiOutlineRight size={30} className= "text-white font-bold hover:text-lemon" />
+      </div>
+    );
+  }
+
+  // Custom Prev Arrow
+  function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="absolute left-5 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer h-10 w-10 md:w-14 md:h-14 rounded-full flex justify-center items-center bg-white/25 hover:bg-gray-900 hover:border-2 hover:border-lemon hover:shadow-lg ho"
+        onClick={onClick}
+      >
+        <AiOutlineLeft size={30} className="text-white font-bold hover:text-lemon" />
+      </div>
+    );
+  }
+
   // Slider settings
   const settings = {
     dots: true,
@@ -25,45 +59,21 @@ function Services() {
     speed: 500,
     slidesToShow: isMobile ? 1 : 2, // Show 1 slide on mobile, 2 slides on desktop
     slidesToScroll: 1,
-    autoplay: true, // Enable autoplay for both mobile and desktop
+    autoplay: true,
     autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
 
-  // Mock data for six slides
+  // Mock data for six slides with imported images
   const slides = [
-    { title: 'Slide 1 - Container 1', content: 'Content 1' },
-    { title: 'Slide 1 - Container 2', content: 'Content 2' },
-    { title: 'Slide 2 - Container 1', content: 'Content 3' },
-    { title: 'Slide 2 - Container 2', content: 'Content 4' },
-    { title: 'Slide 3 - Container 1', content: 'Content 5' },
-    { title: 'Slide 3 - Container 2', content: 'Content 6' },
+    { title: 'Slide 1 - Container 1', imageUrl:Img1 },
+    { title: 'Slide 1 - Container 2', imageUrl:Img2 },
+    { title: 'Slide 2 - Container 1', imageUrl:Img3 },
+    { title: 'Slide 2 - Container 2', imageUrl:Img4 },
+    { title: 'Slide 3 - Container 1', imageUrl:Img5 },
+    { title: 'Slide 3 - Container 2', imageUrl:Img6 },
   ];
-
-  // Custom Next Arrow
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} absolute right-5 top-1/2 transform -translate-y-1/2`}
-        style={{ ...style, display: "block", color: "black" }}
-        onClick={onClick}
-      />
-    );
-  }
-
-  // Custom Prev Arrow
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} absolute left-5 top-1/2 transform -translate-y-1/2`}
-        style={{ ...style, display: "block", color: "black" }}
-        onClick={onClick}
-      />
-    );
-  }
 
   return (
     <div className='z-10 w-full max-w-[1200px]' id='services'>
@@ -90,7 +100,7 @@ function Services() {
           </div>
           <div className="">
             <span className="font-bold text-white w-[220px] h-[50px] rounded-md bg-black px-4 py-2 hover:animate-headShake hover:bg-lemon hover:text-black flex items-center gap-2 hover:cursor-pointer"> 
-              View More Services <AiIcons.AiOutlineArrowRight className='' />
+              View More Services
             </span>
           </div>
         </div>
@@ -100,24 +110,24 @@ function Services() {
         <h1 className="font-sans font-extrabold text-[32px] md:text-[36px] lg:text-[36px] leading-[36px] md:leading-[40px]">
           Ready to Get Started? 
         </h1>
-        <p className="font-sans font-medium mt-5 lg:text-[18px] md:mt-7 max-w-[650px]">
+        <p className="font-sans font-medium mt-5 lg:text-[18px] md:mt-7 max-w-[800px]">
           Starting your project with us is an easy process. We’re all about making things smooth for you, from the first chat to the final touch. 
           We’re here to bring your ideas to life, no fuss involved. Let’s create something great together.
         </p>
 
         {/* Carousel */}
-        <Slider {...settings} className="w-full mt-10">
+        <Slider {...settings} className="w-full mt-10 relative">
           {slides.map((slide, index) => (
             <div key={index} className={`grid grid-cols-1 ${!isMobile && 'md:grid-cols-2'} gap-4 p-4`}>
               {/* Slide Content */}
-              <div className="h-[600px] bg-gray-200 flex justify-center items-center rounded-md">
-                <h3 className="text-lg font-bold">{slide.title}</h3>
+              <div className="h-[300px] md:h-[600px] bg-black text-white flex justify-center items-center rounded-md">
+              <img
+                  src={slide.imageUrl}
+                  alt={slide.title}
+                  className="h-full w-full object-cover rounded-md"
+                />
+
               </div>
-              {/* {!isMobile && (
-                <div className="h-[300px] bg-gray-300 flex justify-center items-center rounded-md">
-                  <h3 className="text-lg font-bold">{slide.content}</h3>
-                </div>
-              )} */}
             </div>
           ))}
         </Slider>
