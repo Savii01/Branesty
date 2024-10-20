@@ -4,13 +4,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
-// importing images
+// importing slider images
 import Img1 from '../Images/img1.png'
 import Img2 from '../Images/img2.png'
 import Img3 from '../Images/img3.png'
 import Img4 from '../Images/img4.png'
 import Img5 from '../Images/img5.png'
 import Img6 from '../Images/img6.png'
+
+// import icon images
+import Brief1 from "../Images/brief1.png";
+import Design1 from "../Images/design1.png";
+import Delivery1 from "../Images/delivery1.png";
 
 function Services() {
   const [isMobile, setIsMobile] = useState(false);
@@ -54,7 +59,7 @@ function Services() {
 
   // Slider settings
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: isMobile ? 1 : 2, // Show 1 slide on mobile, 2 slides on desktop
@@ -99,9 +104,9 @@ function Services() {
             <span className="font-bold text-[14px] md:text-[16px] px-4">Logo Design</span>
           </div>
           <div className="">
-            <span className="font-bold text-white w-[220px] h-[50px] rounded-md bg-black px-4 py-2 hover:animate-headShake hover:bg-lemon hover:text-black flex items-center gap-2 hover:cursor-pointer"> 
+            <button className="font-bold text-white w-[220px] h-[50px] rounded-md bg-black px-4 py-2 hover:animate-headShake hover:bg-lemon hover:text-black flex items-center gap-2 hover:cursor-pointer"> 
               View More Services
-            </span>
+            </button>
           </div>
         </div>
       </div>
@@ -131,6 +136,67 @@ function Services() {
             </div>
           ))}
         </Slider>
+      </div>
+      <div className="text-black bg flex flex-col justify-center items-center text-center px-4 md:px-20  pb-20 md:pt-10">
+        <h1 className="font-sans font-extrabold text-[32px] md:text-[36px] lg:text-[36px] leading-[36px] md:leading-[40px]">
+            Create your design in 3 quick steps!
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 px-4">
+          <div className="bg-lilBlack flex flex-col py-8 rounded-lg w-[320px] h-[240px] px-5">
+            <img 
+            src={Brief1} 
+            alt="brief icon" 
+            className="h-[28px] w-[32px]" />
+            <div className="text-left text-white mt-3 flex flex-col gap-y-2">
+              <h1 className="text-[32px] font-extrabold">
+              Brief
+              </h1>
+              <p className="text-left text-[13px]">
+              Start by sharing your ideas and requirements with us. This initial step allows us to understand 
+              your vision, target audience, and specific goals for the design.
+              </p>
+
+            </div>
+
+          </div>
+          <div className="bg-lilBlack flex flex-col py-8 rounded-lg w-[320px] h-[240px] px-5">
+            <img 
+            src={Design1} 
+            alt="brief icon" 
+            className="h-[28px] w-[32px]" />
+            <div className="text-left text-white mt-3 flex flex-col gap-y-2">
+              <h1 className="text-[32px] font-extrabold">
+              Design
+              </h1>
+              <p className="text-left text-[13px]">
+                Our creative team will transform your brief into captivating design concepts. 
+                We’ll collaborate with you, making revisions as needed to ensure the final design aligns with your vision.
+              </p>
+
+            </div>
+
+          </div>
+          <div className="bg-lilBlack flex flex-col py-8 rounded-lg w-[320px] h-[240px] px-5">
+            <img 
+            src={Delivery1} 
+            alt="brief icon" 
+            className="h-[28px] w-[32px]" />
+            <div className="text-left text-white mt-5 flex flex-col gap-y-2">
+              <h1 className="text-[32px] font-extrabold">
+              Delivery
+              </h1>
+              <p className="text-left text-[13px]">
+              Once you’re satisfied with the design, we’ll deliver the final product promptly, 
+              ensuring you have everything you need to implement your new design seamlessly.
+              </p>
+            </div>
+          </div>
+        </div>
+          <div className="flex justify-center items-center">
+            <button className='mt-6 text-black text-[16px] bg-lemon font-bold py-4 px-8 rounded-md hover:bg-lemon hover:animate-headShake'>
+              Get In Touch
+            </button>
+          </div>
       </div>
     </div>
   );
