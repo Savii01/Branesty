@@ -1,14 +1,17 @@
 import React, {useState} from 'react'
 import * as AiIcons from 'react-icons/ai'
 import { HashLink as Link } from 'react-router-hash-link'
+import Logo1 from '../Images/logo2.png'
 
 function Top() {
     const [showMenu, setShowMenu] = useState(false)
     return (
-      <div className='z-50 bg-black flex justify-center items-center w-screen fixed top-0 h-20 md:h-20'>
+      <div className='z-50 bg-black flex justify-center items-center w-screen fixed top-0 h-10 md:h-20'>
         <div className='text-white w-full max-w-[1200px] flex justify-between px-4 md:px-20 items-center'>
           {/* Logo Section */}
-          <span className='font-bold text-lg md:text-xl'>Branesty.</span>
+          <Link to='#home' smooth>
+          <img src={Logo1} alt="" className='w-24 md:w-32 py-2'/>
+          </Link>
 
           {/* Desktop Menu */}
           <div className={`hidden md:flex `}>
@@ -22,7 +25,7 @@ function Top() {
               <Link to='#testimonials' smooth>
                 <li className='cursor-pointer active:text-lemon py-2 px-4 '>Testimonials</li>
               </Link>
-              <Link to='#contact' smooth>
+              <Link to='#getInTouch' smooth>
               <button className='text-black text-[16px] bg-lemon font-bold py-2 px-4 rounded-md hover:bg-lemon transition-all'>
                 Get In Touch
               </button>
@@ -35,7 +38,7 @@ function Top() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`${!showMenu && 'hidden'} fixed flex left-0 pl-10 text-white top-0 h-full w-full bg-darkBlue border-r border-r-lightBlue md:hidden`}>
+        <div className={`${!showMenu && 'hidden'} fixed flex left-0 pl-10 text-white top-0 h-full w-full bg-darkBlue border-r border-r-lemon md:hidden`}>
           <ul className='flex flex-col gap-4 pt-20'>
             <Link to='#home' smooth>
               <li className='cursor-pointer' onClick={() => setShowMenu(false)}>Home</li>
@@ -46,7 +49,7 @@ function Top() {
             <Link to='#testimonials' smooth>
               <li className='cursor-pointer' onClick={() => setShowMenu(false)}>Testimonials</li>
             </Link>
-            <Link to='#contact' smooth>
+            <Link to='#getInTouch' smooth>
               <li className='cursor-pointer' onClick={() => setShowMenu(false)}>Get In Touch</li>
             </Link>
           </ul>

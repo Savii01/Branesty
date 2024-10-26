@@ -20,8 +20,8 @@ function Home() {
           xl:bg-[right_40%_top]   {/* Push image to the right on xl */}
           2xl:bg-[right_5%_top]  {/* Push image to the right on 2xl */}
           flex justify-center items-center 
-          h-[567px] 
-          lg:h-[600px] 
+          h-[530px] 
+          lg:h-[580px] 
           xl:h-[560px] 
           py-10 
           lg:mt-[24px]"
@@ -41,7 +41,7 @@ function Home() {
             We create tailored solutions that bring your vision to life. Whether you’re a startup or an established business, 
             we focus on user experience and fresh ideas to deliver designs that inspire and engage.
           </p>
-          <Link to="#contact" smooth>
+          <Link to="#getInTouch" smooth>
             <button className="mt-8 text-black text-[16px] bg-lemon font-bold py-4 px-8 rounded-md hover:bg-lemon transition-all hover:animate-headShake">
               Get In Touch
             </button>

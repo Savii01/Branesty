@@ -3,6 +3,18 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import * as FaIcons from 'react-icons/fa'
+import * as AiIcons from 'react-icons/ai'
+import * as BsIcons from 'react-icons/bs'
+import * as RiIcons from 'react-icons/ri'
+import ServicesModal from './ServicesModal'
+
+//  import service images
+import Logo from '../Images/logo.png'
+import BusinessCard from "../Images/business card.png"
+import LetterHead from "../Images/letterhead.png"
+import Flyer from "../Images/flyer design.png"
+
 
 // importing slider images
 import Img1 from '../Images/img1.png'
@@ -19,6 +31,9 @@ import Delivery1 from "../Images/delivery1.png";
 
 function Services() {
   const [isMobile, setIsMobile] = useState(false);
+  const [showServicesModal, setShowServicesModal] = useState(false);
+
+  const handleOnCloseServiceModal = ()=> setShowServicesModal(false)
 
   // Detect screen size for responsiveness
   useEffect(() => {
@@ -81,31 +96,55 @@ function Services() {
   ];
 
   return (
-    <div className='z-10 w-full max-w-[1200px]' id='services'>
+    <div className='z-10  w-full max-w-[1200px]' id='services'>
       <div className='text-black text-center md:text-left px-4 md:px-20 pt-10 pb-5 md:pt-10'>
         <h1 className="font-sans font-extrabold text-[32px] md:text-[36px] lg:text-[36px] leading-[36px] md:leading-[40px]">
           Discover How We Can <br className='hidden md:block'/>Help Your Business Thrive.
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-5 mt-10 mb-6">
-          <div className="w-40 h-44 md:w-60 md:h-64 bg-transparent shadow-sm rounded-md">
-            <div className="bg-black w-40 h-32 md:w-60 md:h-52 mb-2"></div>
+          <div className="w-40 h-52 md:w-60 md:h-72 bg-transparent shadow-sm rounded-md">
+            <div className="bg-black rounded-lg w-40 h-40 md:w-60 md:h-60 mb-2">
+               <img
+                  src={Logo}
+                  alt={"logo image"}
+                  className="h-full w-full object-cover rounded-md"
+                />
+            </div>
             <span className="font-bold text-[14px] md:text-[16px] px-4">Logo Design</span>
           </div>
-          <div className="w-40 h-44 md:w-60 md:h-64 bg-transparent shadow-sm rounded-md">
-            <div className="bg-black w-40 h-32 md:w-60 md:h-52 mb-2"></div>
-            <span className="font-bold text-[14px] md:text-[16px] px-4">Logo Design</span>
+          <div className="w-40 h-52 md:w-60 md:h-72 bg-transparent shadow-sm rounded-md">
+            <div className="bg-black rounded-lg w-40 h-40 md:w-60 md:h-60 mb-2">
+               <img
+                  src={BusinessCard}
+                  alt={"Business Card Image"}
+                  className="h-full w-full object-cover rounded-md"
+                />
+            </div>
+            <span className="font-bold text-[14px] md:text-[16px] px-4">Business Card</span>
           </div>
-          <div className="w-40 h-44 md:w-60 md:h-64 bg-transparent shadow-sm rounded-md">
-            <div className="bg-black w-40 h-32 md:w-60 md:h-52 mb-2"></div>
-            <span className="font-bold text-[14px] md:text-[16px] px-4">Logo Design</span>
+          <div className="w-40 h-52 md:w-60 md:h-72 bg-transparent shadow-sm rounded-md">
+            <div className="bg-black rounded-lg w-40 h-40 md:w-60 md:h-60 mb-2">
+               <img
+                  src={LetterHead}
+                  alt={"letter head image"}
+                  className="h-full w-full object-cover rounded-md"
+                />
+            </div>
+            <span className="font-bold text-[14px] md:text-[16px] px-4">Letter Head</span>
           </div>
-          <div className="w-40 h-44 md:w-60 md:h-64 bg-transparent shadow-sm rounded-md">
-            <div className="bg-black w-40 h-32 md:w-60 md:h-52 mb-2"></div>
-            <span className="font-bold text-[14px] md:text-[16px] px-4">Logo Design</span>
+          <div className="w-40 h-52 md:w-60 md:h-72 bg-transparent shadow-sm rounded-md">
+            <div className="bg-black rounded-lg w-40 h-40 md:w-60 md:h-60 mb-2">
+               <img
+                  src={Flyer}
+                  alt={""}
+                  className="h-full w-full object-cover rounded-md"
+                />
+            </div>
+            <span className="font-bold text-[14px] md:text-[16px] px-4">Flyer Design</span>
           </div>
           <div className="">
-            <button className="font-bold text-white w-[220px] h-[50px] rounded-md bg-black px-4 py-2 hover:animate-headShake hover:bg-lemon hover:text-black flex items-center gap-2 hover:cursor-pointer"> 
-              View More Services
+            <button className="font-bold text-white w-[230px] h-[50px] rounded-md bg-black px-4 py-2 hover:animate-headShake hover:bg-lemon hover:text-black flex items-center gap-2 hover:cursor-pointer" onClick={()=>setShowServicesModal(true)}> 
+              View More Services <FaIcons.FaArrowRight className='font-medium text-base'/> 
             </button>
           </div>
         </div>
@@ -125,7 +164,7 @@ function Services() {
           {slides.map((slide, index) => (
             <div key={index} className={`grid grid-cols-1 ${!isMobile && 'md:grid-cols-2'} gap-4 p-4`}>
               {/* Slide Content */}
-              <div className="h-[300px] md:h-[600px] bg-black text-white flex justify-center items-center rounded-md">
+              <div className="h-[400px] md:h-[600px] bg-transparent text-white flex justify-center items-center rounded-md">
               <img
                   src={slide.imageUrl}
                   alt={slide.title}
@@ -197,6 +236,9 @@ function Services() {
               Get In Touch
             </button>
           </div>
+      </div>
+      <div className="">
+        <ServicesModal onClose={handleOnCloseServiceModal} visible={showServicesModal}/>
       </div>
     </div>
   );
