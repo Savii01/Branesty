@@ -14,27 +14,27 @@ const testimonials = [
   {
     name: 'John Doe',
     feedback: 'This company provided excellent service, and I am very satisfied with their work. Highly recommended!',
-    address: 'Lagos, Nigeria',
+    address: 'New York, NY',
   },
   {
     name: 'Jane Smith',
     feedback: 'The team was professional and attentive to our needs. Their designs helped elevate our brand.',
-    address: 'Abuja, Nigeria',
+    address: 'Los Angeles, CA',
   },
   {
     name: 'Samuel Lee',
     feedback: 'Creative and timely design solutions. Their ability to translate our ideas into visuals is impressive.',
-    address: 'Port Harcourt, Nigeria',
+    address: 'Chicago, IL',
   },
   {
     name: 'Emily Davis',
     feedback: 'Working with this design company was a smooth experience. The results were above and beyond what we expected.',
-    address: 'Kaduna, Nigeria',
+    address: 'Houston, TX',
   },
   {
     name: 'Michael Johnson',
     feedback: 'Their creative designs transformed our project. The attention to detail was amazing!',
-    address: 'Ibadan, Nigeria',
+    address: 'Miami, FL',
   },
 ];
 

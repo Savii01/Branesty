@@ -53,9 +53,8 @@ function ServicesModal({ visible, onClose }) {
                             <h1 className="font-sans font-extrabold text-[32px] md:text-[36px] lg:text-[36px] leading-[36px] md:leading-[40px]"> Our Services
                             </h1>
                             <p className="w-[300px] md:w-[800px] mt-5 text-[14px] md:text-[16px]">
-                                Our skilled designers are committed to realizing your vision with creative and visually stunning designs
-                                that resonate long after the first glance. From branding to graphic design and everything in between,
-                                we are here to assist you in achieving excellence and distinguishing yourself in your field.
+                            With every project, we turn your ideas into beautifully crafted visuals that connect and inspire. From logo designs to full brand identities, 
+                            our services are tailored to capture your unique message and ensure it resonates powerfully with your audience.
                             </p>
                         </div>
 

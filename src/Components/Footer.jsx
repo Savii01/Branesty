@@ -30,22 +30,22 @@ function Footer() {
                 </Link>
             </ul>
           </div>
-          <div className='ml-12 md:ml-0 mb-10 grid grid-cols-4 gap-5 md:pr-10 lg:pr-20 '>
-            <a target='_blank' rel='noreferrer' href='https://github.com/Savii01'>
+          < div className='ml-12 md:ml-0 mb-10 grid grid-cols-4 gap-5 md:pr-10 lg:pr-20 '>
+            <a target='_blank' rel='noreferrer' href=''>
               <FaIcons.FaBehance className='text-white hover:text-lemon cursor-pointer text-2xl '/>
             </a>
-            <a target='_blank' rel='noreferrer' href='https://www.instagram.com/andrewsdesign_/'>
+            <a target='_blank' rel='noreferrer' href='https://www.instagram.com/officialbranesty/?igsh=MTFyeDMzMzNnMHVrcA%3D%3D'>
               <FaIcons.FaInstagram className='text-white hover:text-lemon  text-2xl cursor-pointer'/>
             </a>
-            <a target='_blank' rel='noreferrer' href='https://api.whatsapp.com/send/?phone=2349049152073&text&type=phone_number&app_absent=0'>
+            <a target='_blank' rel='noreferrer' href='https://api.whatsapp.com/send/?phone=14782875929&text&type=phone_number&app_absent=0'>
               <FaIcons.FaWhatsapp className='text-white hover:text-lemon cursor-pointer text-2xl '/>
             </a>
-            <a target='_blank' rel='noreferrer' href='https://web.facebook.com/anthony.saviour.942/'>
+            <a target='_blank' rel='noreferrer' href='https://www.facebook.com/branesty.studio'>
               <FaIcons.FaFacebook className='text-white hover:text-lemon cursor-pointer text-2xl '/>
             </a>
           </div>
         </div>
-        <span className="text-sm text-grayBlue flex justify-center items-center gap-2"><AiIcons.AiOutlineCopyright className=''/>Branesty. All rights reserved</span>
+        <span className="text-sm text-grayBlue flex justify-center items-center gap-2"><AiIcons.AiOutlineCopyright className=''/>Branesty. All rights reserved 2024 </span>
 
 
       </div>

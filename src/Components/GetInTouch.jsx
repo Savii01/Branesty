@@ -65,7 +65,7 @@ console.log(values)
                     <FaIcons.FaPhone className='rotate-[100deg] text-lemon text-4xl md:text-3xl'/>
                     <div className="flex flex-col">
                         <span className='font-medium text-xl'>Call Us</span>
-                        <span className='text-gray-500 text-[14px]'>1 (555) 123-4567</span>
+                        <span className='text-gray-500 text-[14px]'>+1 (478) 287-5929</span>
                     </div>
                 </div>
                 <div className="flex gap-4 md:gap-4 items-center">
@@ -79,7 +79,7 @@ console.log(values)
                     <AiIcons.AiFillEnvironment className='text-lemon text-4xl md:text-3xl '/>
                     <div className="flex flex-col">
                         <span className='font-medium text-xl'>Address</span>
-                        <span className='text-gray-500 text-[14px]'>..USA</span>
+                        <span className='text-gray-500 text-[14px]'>2020 Florida Ave NW, Washington D.C., DC,<br/> United States, Washington, District of Columbia</span>
                     </div>
                 </div>
             </div>
