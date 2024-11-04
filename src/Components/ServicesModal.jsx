@@ -30,11 +30,11 @@ function ServicesModal({ visible, onClose }) {
 
     return (
         <div
-            className="z-50 fixed inset-0 bg-darkBlue bg-opacity-30 backdrop-blur-sm flex justify-center items-center animate-popIn p-4"
+            className="z-[10000]  fixed inset-0 bg-darkBlue bg-opacity-30 backdrop-blur-sm flex justify-center items-center animate-popIn p-4"
             onClick={onClose}
         >
             <div
-                className="bg-white md:w-[1500px] rounded-xl h-[500px] shadow-xl md:h-[780px] relative overflow-hidden"
+                className="bg-white :w-[1500px] rounded-xl h-[500px] shadow-xl md:h-[680px] 2xl:h-[780px] relative md:mt-20 2xl:mt-0 overflow-hidden"
                 onClick={handleOutsideClick}
             >
                 {/* Close Button Positioned inside the Scrollable Content */}

@@ -96,7 +96,7 @@ function Testimonials() {
           ))}
         </Slider>
       </div>
-      <div className="text-black bg w-screen bg-black flex flex-col justify-center items-center text-center px-4 md:px-20  pb-20 pt-10">
+      <div className="text-black bg w-screen bg-black flex flex-col justify-center items-center text-center  md:px-20  pb-20 pt-10">
         <h1 className="font-sans text-white font-extrabold text-[32px] md:text-[36px] lg:text-[36px] leading-[36px] md:leading-[40px]">
         Explore the Unique Advantages of Partnering<br/> with Our Agency
         </h1>

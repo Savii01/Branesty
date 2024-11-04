@@ -53,7 +53,7 @@ console.log(values)
 
 
   return (
-    <div className='py-10 md:pt-40 md:mb:20 flex bg-black flex-col w-screen justify-between items-center' id='getInTouch'>
+    <div className='py-10 md:pt-40 md:mb:20 flex bg-black flex-col w-screen px-4 justify-between items-center' id='getInTouch'>
        <div className=''>
             <h1 className='text-white font-bold text-center text-3xl '>Get In Touch</h1>
             <p className='text-gray-500 text-sm text-center'>Let's Get In Touch.</p>
@@ -99,7 +99,7 @@ console.log(values)
                 <div>
                    <textarea value={values.message}  name='message' rows='4' type="text" placeholder="Message*" onChange={handleOnChange} className='outline-0  text-[14px] bg-lilBlack pt-[3px] px-[20px] w-full h-[150px] rounded-md focus:border focus:border-lemon' required={true}/>
                 </div>
-                 <button type='submit' className='ml-16 md:ml-0 bg-lilBlack w-[120px] px-4 py-4 text-white text-base flex gap-2 rounded-md mt-10 items-center hover:bg-lemon hover:animate-headShake hover:text-darkBlue'>Send <FaIcons.FaArrowRight className='font-medium text-base'/> </button>
+                 <button type='submit' className=' md:ml-0 bg-lilBlack w-[120px] px-4 py-4 text-white text-base flex gap-2 rounded-md mt-5 md:mt-10 items-center hover:bg-lemon hover:animate-headShake hover:text-darkBlue'>Send <FaIcons.FaArrowRight className='font-medium text-base'/> </button>
             </form>
         </div>
     </div>

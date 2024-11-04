@@ -8,6 +8,7 @@ import * as AiIcons from 'react-icons/ai'
 import * as BsIcons from 'react-icons/bs'
 import * as RiIcons from 'react-icons/ri'
 import ServicesModal from './ServicesModal'
+import { HashLink as Link } from 'react-router-hash-link'
 
 //  import service images
 import Logo from '../Images/logo.png'
@@ -176,7 +177,7 @@ function Services() {
           ))}
         </Slider>
       </div>
-      <div className="text-black bg flex flex-col justify-center items-center text-center px-4 md:px-20  pb-20 md:pt-10">
+      <div className="text-black bg flex flex-col justify-center items-center text-center md:px-20  pb-20 md:pt-10">
         <h1 className="font-sans font-extrabold text-[32px] md:text-[36px] lg:text-[36px] leading-[36px] md:leading-[40px]">
             Create your design in 3 quick steps!
         </h1>
@@ -232,9 +233,11 @@ function Services() {
           </div>
         </div>
           <div className="flex justify-center items-center">
-            <button className='mt-6 text-black text-[16px] bg-lemon font-bold py-4 px-8 rounded-md hover:bg-lemon hover:animate-headShake'>
+          <Link to='#getInTouch' smooth>
+              <button className='mt-6 text-black text-[16px] bg-lemon font-bold py-4 px-8 rounded-md hover:bg-lemon hover:animate-headShake'>
               Get In Touch
-            </button>
+              </button>
+          </Link>
           </div>
       </div>
       <div className="">
