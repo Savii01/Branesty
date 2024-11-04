@@ -18,7 +18,7 @@ function Footer() {
         </div>
 
         <div className="text-sm md:flex">
-          <ul className='grid grid-cols-3 mb-5 ml-5 md:ml-0 font-bold text-left md:text-center mt-5 md:flex gap-x-5 md:gap-10 md:font-semibold md:text-lg'>
+          <ul className='grid grid-cols-3 mb-5 ml-5 md:ml-0 font-bold text-left md:text-center mt-5 md:flex md:gap-x-5 md:gap-10 md:font-semibold md:text-lg'>
             <li>
               <Link to='#services' smooth className='cursor-pointer mb-4 md:hover:text-lemon' onClick={() => setShowMenu(!showMenu)}>Services</Link>
             </li>

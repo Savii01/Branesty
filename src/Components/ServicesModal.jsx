@@ -30,7 +30,7 @@ function ServicesModal({ visible, onClose }) {
 
     return (
         <div
-            className="z-[10000]  fixed inset-0 bg-darkBlue bg-opacity-30 backdrop-blur-sm flex justify-center items-center animate-popIn p-4"
+            className="z-[10000]  fixed inset-0 bg-darkBlue bg-opacity-80 backdrop-blur-sm flex justify-center items-center animate-popIn p-4"
             onClick={onClose}
         >
             <div
